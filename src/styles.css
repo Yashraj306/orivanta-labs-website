@@ -1,0 +1,59 @@
+@import "tailwindcss" source("../");
+
+@theme {
+  --color-brand: #004B49;
+  --color-brand-light: #006B68;
+  --color-brand-dark: #003330;
+  --color-accent: #00D4C8;
+  --color-cream: #F8F6F1;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.gradient-brand {
+  background: linear-gradient(135deg, #004B49 0%, #006B68 100%);
+}
+
+.gradient-dark {
+  background: linear-gradient(180deg, #002E2C 0%, #004B49 100%);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #00D4C8 0%, #00F5E9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px rgba(0, 75, 73, 0.15);
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.section-divider {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #004B49, transparent);
+}
